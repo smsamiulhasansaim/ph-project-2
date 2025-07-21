@@ -10,6 +10,23 @@
      <script src="https://cdn.tailwindcss.com"></script>
      <!-- link-font -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        'justice-gold': '#A07C4A',
+                        'justice-dark-brown': '#5E4B31',
+                        'justice-light-gray': '#F5F5F5',
+                    },
+                    backgroundImage: {
+                        'legal-bg': "url('images/banner.png')",
+                        'testimonial-bg': "url('https://images.unsplash.com/photo-1596765793442-f9d9d3d3a0c5?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2940&q=80')"
+                    }
+                }
+            }
+        }
+    </script>
 </head>
 <body>
      <!-- Header/Navigation -->
@@ -54,5 +71,30 @@
             </button>
         </nav>
     </header>
+    <!-- Hero Section -->
+    <section class="relative bg-legal-bg bg-cover bg-center bg-no-repeat h-[500px] flex items-center justify-center text-center px-4">
+        <div class="absolute inset-0 bg-black opacity-60"></div>
+
+        <div class="relative z-10 max-w-2xl mx-auto text-white">
+            <h1 class="text-5xl md:text-6xl font-extrabold leading-tight mb-4">
+                We Provide Effective <br> Legal Solutions
+            </h1>
+            <p class="text-lg md:text-xl text-gray-300 mb-8">
+                There are many variations of passages of Lorem Ipsum available, but the majority
+                have suffered alteration in some form, by injected humour.
+            </p>
+            <div class="flex flex-col sm:flex-row items-center justify-center space-y-4 sm:space-y-0 sm:space-x-4">
+                <input
+                    type="text"
+                    placeholder="Search your services"
+                    class="w-full sm:w-80 p-3 rounded-md bg-white bg-opacity-20 text-white placeholder-gray-300 border border-gray-500 focus:outline-none focus:border-justice-gold"
+                />
+                <button class="w-full sm:w-auto bg-justice-gold hover:bg-justice-dark-brown text-white font-semibold py-3 px-8 rounded-md shadow-lg transition duration-300 ease-in-out">
+                    Search
+                </button>
+            </div>
+        </div>
+    </section>
+
 </body>
 </html>
