@@ -1,0 +1,38 @@
+/* Basics setup */
+*{
+   margin: 0;
+   padding: 0;
+   box-sizing: border-box;
+}
+
+/* custom-css */
+.dropdown-menu {
+            display: none;
+            position: absolute;
+            background-color: white;
+            min-width: 200px;
+            box-shadow: 0 8px 16px rgba(0,0,0,0.1);
+            z-index: 1;
+            border-radius: 0.5rem;
+            padding: 0.5rem 0;
+        }
+        .group:hover .dropdown-menu {
+            display: block;
+        }
+        .dropdown-menu a {
+            display: block;
+            padding: 0.5rem 1rem;
+            color: #4b5563;
+        }
+        .dropdown-menu a:hover {
+            background-color: #f3f4f6;
+            color: #A07C4A;
+        }
+        .faq-answer {
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 0.3s ease-out;
+        }
+        .faq-item.active .faq-answer {
+            max-height: 500px;
+        }
